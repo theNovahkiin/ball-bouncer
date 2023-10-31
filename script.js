@@ -1,10 +1,7 @@
 const canvas = document.getElementById("cnv");
 const context = canvas.getContext("2d");
-
-function loadCanvas(){
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-}
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
 
 let xPos = Math.random() * window.innerWidth;
 let yPos = Math.random() * window.innerHeight;
@@ -28,7 +25,4 @@ function ball(){
         ySpeed = -ySpeed;
     }
 }
-
-loadCanvas();
 ball();
-addEventListener("resize", loadCanvas);
